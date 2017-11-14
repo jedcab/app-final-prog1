@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: 'Pontano Sans', sans-serif;
+	background-color: #FFDC52;
+}
+
+header {
+    margin: 2% 0;
+}
+
+section {
+    width: 70%;
+    margin: 2% auto;
+}
+
+header h1 {
+    font-size: 4em;
+    margin: 0 auto;
+	padding: 2%;
+    color: #eb1f48;
+    font-weight:700;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+table , #marcador {
+    margin:0 auto;
+    padding: 2%;
+}
+
+table {
+    border-collapse: collapse;
+    background-color:#eb1f48; 
+}
+
+td {
+	width:120px;
+	height:120px;
+	border:2px white solid;
+	text-align:center;
+    font-size: 4em;
+    font-family: 'Pontano Sans', sans-serif; 
+}
+
+/* MARCADOR */
+#marcador {
+    text-align: center;
+    width: 90%;
+}
+
+#player1 , #player2{
+    text-transform:uppercase;
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 4% 0;
+    margin: 4% 0;
+}
+
+#jugador1, #jugador2 {
+    display: inline-block;
+    color: #000;
+    text-transform:uppercase;
+    font-weight: bold;
+    background-color: #FFDC52;
+    padding: 4%;
+    margin: 5%;
+}
+#jugador1 p{
+    padding: 2%;
+}
+#jugador2 p{
+    padding: 2%;
+}
+
+/*  CAMBIOS ESTANDO EN JUEGO    */
+#player1.enJuego , #player2.enJuego {
+    font-weight: bolder;
+}
+
+#player1.enJuego{
+	background-color: deeppink;
+}
+
+#player2.enJuego{ 
+	background-color:cornflowerblue;
+}
+
+#puntajes, #reseT {
+    background-color:#eb1f48;
+	color:#FFF;
+	text-align: center;
+	padding: 2%;
+    border-style: none;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#marcador , #indicador{
+	margin: 2% 0;
+}
+
+#indicador {
+    font-weight: bold;
+}
+
+/*  ---------------   TABLA PUNTAJES --------------------  */
+.sidenav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #eb1f48;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10%;
+}
+
+.sidenav a{
+    padding: 5%;
+    text-decoration: none;
+    font-size: 2em;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-left: 30%;
+}

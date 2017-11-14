@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+	font-family: 'Pontano Sans', sans-serif;
+	background-color: #FFDC52;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0 auto;
+	padding: 2%;
+    color: #eb1f48;
+    font-weight:700;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+#main1 {
+    width: 90%;
+    padding: 2%;
+    margin: 0 auto;
+    background-color:#eb1f48;
+    position: relative;
+}
+
+#registroJug {
+    width:100%;
+    margin: 0 auto;
+	margin-top: 20%;
+    background-color:#eb1f48;
+    position: relative;
+}
+
+#photo-player-1, #photo-player-2{
+    clip-path: circle(40% at center);
+}
+
+p{
+    font-size: 2em;
+    margin: 5%;
+    color: darkslategrey;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;  
+}
+
+a{
+    text-decoration: none;
+    color:  darkslategrey;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#Info {
+    color: #FFF;
+}
+
+#botonIniciar, #botonReset, #botonTirar, #BotonRegistar, #BotonEmpezar{
+	background-color: #FFDC52;
+	color:  darkslategrey;
+	padding: 1%;
+	margin: 1.5%;
+	border: none;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+#BotonRegistar, #BotonEmpezar{
+    width: 90%;
+    padding: 5%;
+    margin: 5%;
+}
+#puntajes {
+  	background-color: #FFDC52;
+	color:  darkslategrey;
+	padding: 1.2%;
+	margin:0.2%;
+	border: none;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;  
+}
+/* -----------------   TABLA    --------------------- */
+table {
+    margin: 0 auto;
+    width: 95%;
+    padding: 0.5%;
+    color: #000;
+    border-collapse: collapse;
+    z-index: 5;
+    position: absolute;
+    background-color: #ffdb99;
+}
+
+th,td{
+    border: 1.2px solid #000;  
+    padding: 0.5%;
+}
+
+table thead tr th , th:last-of-type {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+table tbody tr:last-of-type td {
+    text-align: center;
+}
+
+td{
+    padding-left: 3%;
+}
+.noDisp{
+    display: none;
+}
+
+/* ---------------      CAMBIOS ESTANDO EN JUEGO      -------------------- */
+#player1, #player2{
+    color: #FFF;
+}
+
+#player1.enJuego , #player2.enJuego {
+    font-weight: bolder;
+}
+
+#player1.enJuego{
+	background-color: #e27065;
+	border: none;
+	color: #FFF;
+	font-weight: 400;
+}
+
+#player2.enJuego{ 
+	background-color: #e2e165; 
+	border: none;
+	color: #FFF;
+	font-weight: 400;
+}
+
+/* ---------------      MARCADOR     -------------------- */
+
+#marcador {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#player1 , #player2{
+    text-transform:uppercase;
+    text-align: center;
+    display: block;
+    float: left;
+    border: 1px solid;
+    width: 49.5%;
+    padding: 1% 0;
+}
+
+/* ---------------      DADOS     -------------------- */
+
+#contenedor {
+    background-color: #ffdb99;
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+#dado1 , #dado2 , #dado3 {
+    float: left;
+    width: 15%;
+    margin-left: 10%;
+    padding: 2%;
+}
+
+#dado4{
+    width: 15%;
+    margin: 0;
+    padding: 2%;
+    margin-left: 25%;
+}
+
+#dado5{
+   float: left;
+   width: 15%;  
+   margin-left: 55%;
+   margin-top: -20%;
+   padding: 2%; 
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.seleccionado {
+    opacity: 0.5;
+}
+
+#datosjugadores{
+    width: 90%;
+    background-color:#eb1f48;
+	padding: 5%;
+	margin-top: 2%;
+}
+/* -----------------   Registrate    --------------------- */
+form{
+    width: 90%;
+    margin: 2%;
+	margin-top: 1%;
+    background-color:#eb1f48;
+    
+}
+
+label{
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+	padding: 0;
+}
+
+input{
+    width: 50%;
+    margin-left: 5%;
+    padding: 1%;
+   font-size: 1em;
+   
+}
+.guardar{
+	background-color:#eb1f48;
+	color:#FFF;
+	text-align: center;
+	padding: 2%;
+    margin-left: 35%;
+    margin-top: 10%;
+	border: solid 1px;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#jugadores{
+	margin: 0 auto;
+	width: 100%;
+    padding-bottom: 5%;
+    margin-top: 10%;
+    background-color: #eb1f48;
+}
+
+#photo-player-1 , #photo-player-2 {
+    width: 25%;
+    float: right;
+    margin-right: 8%;
+}
+/* -----------------   Seccion jugar    --------------------- */
+#datosjugadores{
+    width: 90%;
+	margin: 0 auto;
+    margin-top: 10%;
+	padding: 2%;
+	color: azure;
+}
+
+#datosjugadores p, h3{
+	color: azure;
+	margin:0 3%;
+	font-size:1em;
+    padding: 2%;
+	text-align: left;
+}
+
+#Juegos {
+    margin: 0 auto;
+}
+
+#foto1, #foto2{
+	width: 25%;
+    float: right;
+    margin-right: 2%;
+} 
+
+#Botongenerala, #Botontateti, #TercerJuego, #Volver{
+	background-color: #eb1f48;
+	color:azure;
+	padding: 2%;
+	margin:2% 3%;
+	border: none;
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: 'Oswald', sans-serif;
+}
+
+button a {
+    display: block;
+}
