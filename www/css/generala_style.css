@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two:700');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pontano Sans', sans-serif;
+    background-color: #FFDC52;
+}
+
+h1 {
+    font-size: 4em;
+    margin: 0 auto;
+    padding: 1%;
+    color: #eb1f48;
+    font-weight: 700;
+    text-align: center;
+    font-family: 'Lobster Two', cursive;
+}
+
+#main {
+    width: 90%;
+    padding: 2%;
+    margin: 0 auto;
+    margin-top: 1%;
+    background-color: #eb1f48;
+    position: relative;
+}
+
+#Info {
+    color: #FFF;
+}
+
+#botonIniciar,
+#botonReset,
+#botonTirar {
+    background-color: #FFDC52;
+    color: darkslategrey;
+    padding: 1%;
+    margin: 1.5%;
+    border: none;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+#botonReset {
+    width: 50%;
+}
+
+#puntajes {
+    background-color: #FFDC52;
+    color: darkslategrey;
+    padding: 1.2%;
+    margin: 0.2%;
+    border: none;
+    font-size: 1.5em;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* -----------------   TABLA    --------------------- */
+
+table {
+    margin: 0 auto;
+    width: 95%;
+    padding: 0.5%;
+    color: #000;
+    border-collapse: collapse;
+    z-index: 5;
+    position: absolute;
+    background-color: #ffdb99;
+}
+
+th,td {
+    border: 1.2px solid #000;
+    padding: 0.5%;
+}
+
+table thead tr th,
+th:last-of-type {
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+table tbody tr td {
+    text-align: center;
+}
+
+table tbody tr:first-of-type {
+    text-align: left;
+}
+
+td {
+    padding-left: 3%;
+}
+
+.noDisp {
+    display: none;
+}
+
+.message {
+    background-color: #f79bc9;
+    border-radius: 20px;
+    font-size: 0.8em;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    line-height: 50px;
+    color: white;
+}
+
+#tablaPuntajes button {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #FFDC52;
+	color:  darkslategrey;
+	border: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* ---------------      MARCADOR     -------------------- */
+
+#marcador {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#botonTirar {
+    width: 100%;
+    margin: 0;
+}
+
+#player1 , #player2 {
+    text-transform: uppercase;
+    text-align: center;
+    width: 47.5%;
+    display: block;
+    float: left;
+    border: 1px solid;
+    margin: 1%;
+    font-size: 1.5em;
+}
+
+/* ---------------      CAMBIOS ESTANDO EN JUEGO      -------------------- */
+.enJuego {
+    background-color: #e2e165;
+    border: none;
+    color: #000000;
+    font-weight: bolder;
+}
+
+
+/* ---------------      Dados     -------------------- */
+
+#contenedor { /*modificado x juli*/
+    background-color: #ffdb99;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+#dado1, #dado2, #dado3 {/*modificado x juli*/
+    float: left;
+    width: 23%;
+    margin-left: 5%;
+	margin-top: 5%;
+    padding: 2%;
+}
+
+#dado4 {/*modificado x juli*/
+    width: 23%;
+    margin: 0;
+    padding: 2%;
+    margin-left: 20%;
+}
+
+#dado5 {/*modificado x juli*/
+    float: left;
+    width: 23%;
+    margin-left: 54%;
+    margin-top:-28%;
+    padding: 2%;
+}
+
+img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.seleccionado {
+    opacity: 0.5;
+}
+
+
+/* --------------- Lo agregó Ori! ------------------ */
+.showWinsP1, #userNickP1, .showWinsP2, #userNickP2 {
+    font-size: 1.2em;
+    padding: 2%;
+    color:#FFF;
+}
+
+#userNickP1 {
+    background-color: yellowgreen;
+    width: 50%;
+}
+
+#userNickP2 {
+  	background-color:cornflowerblue;  
+    width: 50%;
+}
+
+#historialJugadores {
+     background-color:#eb1f48;   
+     border: 1px solid #000;
+     display: none;
+     width: 94%;
+    top:25%;
+     left: 2%;
+     right: 2%;
+     position: fixed;
+     z-index: 20;
+}
+
+
+#puntajes{
+    margin-left: 2%;
+}

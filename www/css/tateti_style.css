@@ -16,11 +16,6 @@ header {
     margin: 2% 0;
 }
 
-section {
-    width: 70%;
-    margin: 2% auto;
-}
-
 header h1 {
     font-size: 4em;
     margin: 0 auto;
@@ -31,70 +26,74 @@ header h1 {
     font-family: 'Lobster Two', cursive;
 }
 
-table , #marcador {
-    margin:0 auto;
-    padding: 2%;
-}
-
 table {
     border-collapse: collapse;
-    background-color:#eb1f48; 
+    background-color:#eb1f48;
+    width: 95%;
+    margin: 10% 2% 0 2%;
+    padding: 0;
+}
+
+td , tr {
+    width: 85px;
+    height: 85px;
 }
 
 td {
-	width:120px;
-	height:120px;
-	border:2px white solid;
+	border:1px white solid;
 	text-align:center;
     font-size: 4em;
     font-family: 'Pontano Sans', sans-serif; 
 }
-
-/* MARCADOR */
+/* --------------- También agregué este botón pa volver ------------- */
+#botVolverJ {
+    background-color:#FFDC52;
+    padding: 2%;
+    margin: 0 2% 0 5%;
+    border: none;
+	text-align: center; 
+    font-family: 'Oswald', sans-serif;
+}
+#botVolverJ a{
+    text-decoration: none;     
+    color:black;
+}
+/*  ---------------   MARCADOR  --------------------  */
 #marcador {
-    text-align: center;
     width: 90%;
+    margin: 0 auto;
+    text-align: center;
 }
 
-#player1 , #player2{
-    text-transform:uppercase;
+#player1 , #player2 {
+    text-transform: uppercase;
+    text-align: center;
+    width: 47%;
     display: block;
     float: left;
-    width: 50%;
-    padding: 4% 0;
-    margin: 4% 0;
+    border: 1px solid;
+    margin: 1%;
+    font-size: 1.5em;
 }
 
-#jugador1, #jugador2 {
-    display: inline-block;
-    color: #000;
-    text-transform:uppercase;
-    font-weight: bold;
-    background-color: #FFDC52;
-    padding: 4%;
+#foto1, #foto2 {
+    float: right;
     margin: 5%;
 }
-#jugador1 p{
-    padding: 2%;
-}
-#jugador2 p{
-    padding: 2%;
-}
-
-/*  CAMBIOS ESTANDO EN JUEGO    */
+/*  ---------------   CAMBIO DE ESTADO JUGADORES  --------------------  */
 #player1.enJuego , #player2.enJuego {
     font-weight: bolder;
 }
 
 #player1.enJuego{
-	background-color: deeppink;
+	background-color: yellowgreen;
 }
 
 #player2.enJuego{ 
 	background-color:cornflowerblue;
 }
 
-#puntajes, #reseT {
+#puntajes, #reseT{
     background-color:#eb1f48;
 	color:#FFF;
 	text-align: center;
@@ -104,40 +103,40 @@ td {
     font-family: 'Oswald', sans-serif;
 }
 
-#marcador , #indicador{
-	margin: 2% 0;
+#reseT{  /* cambiado por juli*/
+    width: 60%;
+    margin: 5% 0 0 2%;
 }
 
-#indicador {
-    font-weight: bold;
+/* --------------- Lo agregó Ori! ------------------ */
+.showWinsP1, #userNickP1, .showWinsP2, #userNickP2 {
+    font-size: 1.2em;
+    padding: 2%;
+    color:#FFF;
 }
 
-/*  ---------------   TABLA PUNTAJES --------------------  */
-.sidenav{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #eb1f48;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 10%;
+#userNickP1 {
+    background-color: yellowgreen;
+    width: 50%;
 }
 
-.sidenav a{
-    padding: 5%;
-    text-decoration: none;
-    font-size: 2em;
-    color: #FFF;
-    display: block;
-    transition: 0.3s;
+#userNickP2 {
+  	background-color:cornflowerblue;  
+    width: 50%;
 }
 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 5%;
-    margin-left: 30%;
+#historialJugadores {
+     background-color:#eb1f48;   
+     border: 1px solid #000;
+     display: none;
+     width: 94%;
+     height: 30%;
+     left: 2%;
+     right: 2%;
+     position: fixed;
+     z-index: 20;
+}
+
+#puntajes{
+    margin-left: 2%;
 }

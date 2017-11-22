@@ -39,21 +39,23 @@ function celdas(tr,td){
         {   //ESTABLECEMOS QUE SE VISUALIZA UNA VEZ QUE TERMINA EL JUEGO
             //SI GANA JUGADOR 1
             if(jugador == 1){
-                $("#indicador").text("El jugador " + jugador + " ha ganado!");
+                $("#indicador").text(Store.load("usuario1") + " ha ganado!");
                 $("#indicador").css("text-transform","uppercase");
-                $("#player1").css("background-color","deeppink");
-                $("table").css("background-color","deeppink");
+                $("#player1").css("background-color","yellowgreen");
+                $("table").css("background-color","yellowgreen");
                 $("#player2").removeClass("enJuego");	
                 $("table").removeClass("disponible");
+                Store.save("historialP1",Store.load("historialP1")+1);
             }else{
-                //SI GANA JUGADOR 1
-                $("#indicador").text("El jugador " + jugador + " ha ganado!");
+                //SI GANA JUGADOR 2
+                $("#indicador").text(Store.load("usuario2") + " ha ganado!");
                 $("#indicador").css("text-transform","uppercase");
                 $("#marcador #player2").css("background-color","cornflowerblue");
                 $("table").css("background-color","cornflowerblue");
                 $("#player1").removeClass("enJuego");	
                 $("table").removeClass("disponible");
-                }
+                Store.save("historialP2",Store.load("historialP2")+1);
+            }
             $("table").removeClass("disponible");
         }else{
             var empate = true;
@@ -68,7 +70,7 @@ function celdas(tr,td){
             if(empate){
                 $("#indicador").html("Han empatado!");
                 $("#indicador").css("text-transform","uppercase");
-                $("table").css("background-color","#79f96b");
+                $("table").css("background-color","rgb(255, 167, 0)");
                 $("#player1").removeClass("enJuego");
                 $("#player2").removeClass("enJuego");	
                 $("table").removeClass("disponible");			
@@ -89,16 +91,12 @@ function resetGame(){
 	$("#marcador").html(reiniciarMarcador);
 	$("table").addClass("disponible"); //  La tabla vuelve a estar disponible
 	$("table").css("background-color","");
+    cargarDatos();
 }
 
 // Puntajes desplegable 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "50%";
-    $("container").addClass("overlay");
-}
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft= "0";
-    $("#container").removeClass("overlay");
-}
+$(document).ready(function(){
+    $("#puntajes").click(function(){
+        $("#historialJugadores").toggle();
+    });
+});

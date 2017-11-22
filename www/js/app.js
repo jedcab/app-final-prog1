@@ -1,3 +1,8 @@
+/*.orientation.lock('portrait')
+screen.orientation.lock('portrait');
+screen.orientation.onchange = function(){console.log(screen.orientation.type);
+};*/
+
 //////////////  GUARDAR LOS USUARIOS    //////////////////////
 var Store = {
     load: function(key){
@@ -33,6 +38,7 @@ function guardarDatos(){
     
     Store.save("nombreJ1",nombre1);
     Store.save("usuario1",user1);
+    Store.save("historialP1",0);
     
     //  JUGADOR #2
     var nombre2=$("#nombre2").val();
@@ -40,10 +46,9 @@ function guardarDatos(){
     
     Store.save("nombreJ2",nombre2);
     Store.save("usuario2",user2);
+    Store.save("historialP2",0);
     
     window.location="home.html";
-    /*Storage.setItem("puntajej1",0);
-    Storage.setItem("puntajej2",0);*/
 };
 
 //  DATOS DE LOS JUGADORES
@@ -73,20 +78,22 @@ function cargarDatos(){
     puntajeP2=Store.load("historialP2");
     
     //  MOSTRAR DATOS
-    $("#userNameP1").html(nameP1);
-    $("#userNickP1").html(nickP1);
-    //$("datosjugadores #puntaje1").html('Puntaje: '+ puntajeP1);
+    $("#userNameP1").append(nameP1);
+    $("#userNickP1").append(nickP1);
+    $(".showNickP1").html(nickP1);
+    $("#userWinsP1").append(puntajeP1);
+    $(".showWinsP1").html("Partidas ganadas: " + puntajeP1);
     $("#foto1 img").attr("src",photoP1);
     
-    $("#userNameP2").html(nameP2);
-    $("#userNickP2").html(nickP2);
-	//$("#datosjugadores #puntaje2").html('Puntaje: '+ puntajeP2);
+    $("#userNameP2").append(nameP2);
+    $("#userNickP2").append(nickP2);
+    $(".showNickP2").html(nickP2);
+	$("#userWinsP2").append(puntajeP2)
+    $(".showWinsP2").html("Partidas ganadas: " + puntajeP2);
     $("#foto2 img").attr("src",photoP2);
     
     console.log(Store.load("nombreJ1"), Store.load("usuario1"), Store.load("nombreJ2"), Store.load("usuario2"), Store.load("historialP1"), Store.load("historialP2"));
 };
-
-
 
 //  VALIDAR LA TOTALIDAD DE LOS DATOS DE LOS USUARIOS
 function validacion(){

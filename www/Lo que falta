@@ -1,0 +1,30 @@
+GENERAL (dejarlo para lo ultimo, lo otro es mas importante)
+- Restringir la rotacion de la pantalla
+
+PANTALLA INDEX
+- Se me ve apenas mas ancho que la pantalla. Retocar el % del width
+- Cambiar los colores de las letras grises sobre el fondo rojo
+
+ESTABLECER EL DIV DE HISTORIAL
+- Establecer uno para ambos juegos (en la generala no funciona el codigo, se ve que algo se pisa con la funcion de los puntajes)
+- Ubicar bien los elementos
+    -Nick de jugadores
+    -Historial
+    -Avatar de jugadores
+    -Boton Volver
+    
+TATETI
+- Cuando arranca el Jugador 1 no esta pintado su casillero, recien funciona despues del primer cambio de turno.
+- Acomodar dimensiones y BOTON REINICIAR que cambia de lugar segun el turno.
+
+GENERALA
+- Darle mas relevancia al div de los dados, quedo es muy chico. Tiene que ser igual de grande que el div rojo, segun Fabian.
+- Mejorar el css de los botones de la Tabla de puntajes de la Generala.
+- AGERGAR el historial aca
+
+- El jugador tiene que poder apretar los botones de "Escalera, Full, Poker, Generala y Generala Doble" a pesar de NO tener ese juego. En ese caso se le anotaria 0.
+
+- Determinar que para hacer Generala Doble, debe haber hecho si o si ANTES generala comun.
+
+- La funcion ganador esta creada falta llamarla. Para ejecutarse, deben estar completos TODOS los juegos, asi determinaria el puntaje total mayor.
+- Esto es un detalle pero estaria bueno que en algun lugar aparezca la cantTiros. Es decir si es el tiro 1, 2 o 3.

@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster+Two:700');
 @import url('https://fonts.googleapis.com/css?family=Oswald');
 
+/* -----------------   Estilos "generales"   --------------------- */
 * {
    margin: 0;
    padding: 0;
@@ -12,6 +13,19 @@ body {
 	background-color: #FFDC52;
 }
 
+a{
+   text-decoration: none;
+}
+
+p{
+    font-size: 2em;
+    margin: 5%;
+    color: white;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;  
+}
+
+/* -----------------   Estilos "index.html"   --------------------- */
 h1 {
     font-size: 4em;
     margin: 0 auto;
@@ -22,14 +36,6 @@ h1 {
     font-family: 'Lobster Two', cursive;
 }
 
-#main1 {
-    width: 90%;
-    padding: 2%;
-    margin: 0 auto;
-    background-color:#eb1f48;
-    position: relative;
-}
-
 #registroJug {
     width:100%;
     margin: 0 auto;
@@ -38,179 +44,35 @@ h1 {
     position: relative;
 }
 
-#photo-player-1, #photo-player-2{
-    clip-path: circle(40% at center);
-}
-
-p{
-    font-size: 2em;
-    margin: 5%;
-    color: darkslategrey;
-    text-align: center;
-    font-family: 'Oswald', sans-serif;  
-}
-
-a{
-    text-decoration: none;
-    color:  darkslategrey;
-    font-size: 1.5em;
-    font-family: 'Oswald', sans-serif;
-}
-
-#Info {
-    color: #FFF;
-}
-
-#botonIniciar, #botonReset, #botonTirar, #BotonRegistar, #BotonEmpezar{
+#botonIniciar, #botonReset, #botonTirar, #BotonRegistrar, #BotonEmpezar{
 	background-color: #FFDC52;
 	color:  darkslategrey;
 	padding: 1%;
 	margin: 1.5%;
 	border: none;
+    text-decoration: none;
     font-size: 1.5em;
     font-family: 'Oswald', sans-serif;
 }
-#BotonRegistar, #BotonEmpezar{
+
+#BotonRegistrar, #BotonEmpezar{
     width: 90%;
     padding: 5%;
-    margin: 5%;
-}
-#puntajes {
-  	background-color: #FFDC52;
-	color:  darkslategrey;
-	padding: 1.2%;
-	margin:0.2%;
-	border: none;
-    font-size: 1.5em;
-    font-family: 'Oswald', sans-serif;  
-}
-/* -----------------   TABLA    --------------------- */
-table {
-    margin: 0 auto;
-    width: 95%;
-    padding: 0.5%;
-    color: #000;
-    border-collapse: collapse;
-    z-index: 5;
-    position: absolute;
-    background-color: #ffdb99;
+    margin: 5%; 
 }
 
-th,td{
-    border: 1.2px solid #000;  
-    padding: 0.5%;
+#BotonRegistrar a, #BotonEmpezar a {
+   text-decoration: none;
+   color:  darkslategrey;
+   display: inline-block;
 }
 
-table thead tr th , th:last-of-type {
-    text-transform: uppercase;
-    font-size: 0.8em;
-}
-
-table tbody tr:last-of-type td {
-    text-align: center;
-}
-
-td{
-    padding-left: 3%;
-}
-.noDisp{
-    display: none;
-}
-
-/* ---------------      CAMBIOS ESTANDO EN JUEGO      -------------------- */
-#player1, #player2{
-    color: #FFF;
-}
-
-#player1.enJuego , #player2.enJuego {
-    font-weight: bolder;
-}
-
-#player1.enJuego{
-	background-color: #e27065;
-	border: none;
-	color: #FFF;
-	font-weight: 400;
-}
-
-#player2.enJuego{ 
-	background-color: #e2e165; 
-	border: none;
-	color: #FFF;
-	font-weight: 400;
-}
-
-/* ---------------      MARCADOR     -------------------- */
-
-#marcador {
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-#player1 , #player2{
-    text-transform:uppercase;
-    text-align: center;
-    display: block;
-    float: left;
-    border: 1px solid;
-    width: 49.5%;
-    padding: 1% 0;
-}
-
-/* ---------------      DADOS     -------------------- */
-
-#contenedor {
-    background-color: #ffdb99;
-    width: 75%;
-    margin: 0 auto;
-    margin-top: 1%;
-}
-
-#dado1 , #dado2 , #dado3 {
-    float: left;
-    width: 15%;
-    margin-left: 10%;
-    padding: 2%;
-}
-
-#dado4{
-    width: 15%;
-    margin: 0;
-    padding: 2%;
-    margin-left: 25%;
-}
-
-#dado5{
-   float: left;
-   width: 15%;  
-   margin-left: 55%;
-   margin-top: -20%;
-   padding: 2%; 
-}
-
-img {
-    width: 100%;
-    margin: 0 auto;
-}
-
-.seleccionado {
-    opacity: 0.5;
-}
-
-#datosjugadores{
-    width: 90%;
-    background-color:#eb1f48;
-	padding: 5%;
-	margin-top: 2%;
-}
-/* -----------------   Registrate    --------------------- */
+/* -----------------   Registro de jugadores    --------------------- */
 form{
     width: 90%;
     margin: 2%;
 	margin-top: 1%;
     background-color:#eb1f48;
-    
 }
 
 label{
@@ -224,9 +86,11 @@ input{
     width: 50%;
     margin-left: 5%;
     padding: 1%;
-   font-size: 1em;
+    font-size: 1em;
+    border: none;
    
 }
+
 .guardar{
 	background-color:#eb1f48;
 	color:#FFF;
@@ -247,49 +111,104 @@ input{
     background-color: #eb1f48;
 }
 
-#photo-player-1 , #photo-player-2 {
+#photo-player-1, #photo-player-2{
+    clip-path: circle(40% at center);
     width: 25%;
     float: right;
     margin-right: 8%;
 }
-/* -----------------   Seccion jugar    --------------------- */
+
+#foto1 , #foto2 {
+    float: right;
+    margin-right: 5%;
+}
+
+/*  ---------------   Pantalla de juegos   --------------------  */
 #datosjugadores{
     width: 90%;
 	margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 2%;
 	padding: 2%;
 	color: azure;
+    background-color: #eb1f48;
 }
 
-#datosjugadores p, h3{
+#datosjugadores p{
 	color: azure;
-	margin:0 3%;
-	font-size:1em;
+	margin: 0 3%;
+	font-size:1.1em;
     padding: 2%;
 	text-align: left;
+    width: 60%;
 }
 
-#Juegos {
+#titJ1{
+    background-color: yellowgreen;
+    width: 50%;
+    padding: 1%;
+}
+
+#titJ2 {
+  	background-color:cornflowerblue;  
+    width: 50%;
+    padding: 1%;
+}
+
+#juegos {
+    width: 95%;
     margin: 0 auto;
 }
 
-#foto1, #foto2{
-	width: 25%;
-    float: right;
-    margin-right: 2%;
-} 
-
 #Botongenerala, #Botontateti, #TercerJuego, #Volver{
 	background-color: #eb1f48;
-	color:azure;
 	padding: 2%;
-	margin:2% 3%;
 	border: none;
-    font-size: 1.5em;
+    font-size: 1em;
     display: inline-block;
     font-family: 'Oswald', sans-serif;
 }
 
-button a {
+#juegos button a {
     display: block;
+    color:azure;
+}
+
+#juegos button {
+    width: 30%;
+    margin: 5% 1.2%;
+}
+
+/*  ---------------   Historial de puntajes    --------------------  */
+.historial{
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: #eb1f48;
+    border-bottom: 10px solid #FFDC52;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10%;
+}
+
+.historial a{
+    padding: 5%;
+    text-decoration: none;
+    font-size: 2em;
+    color: #FFF;
+    display: block;
+    transition: 0.3s;
+}
+
+.historial .closebtn {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    margin-left: 30%;
+}
+
+.historial p {
+    color: white;
+    width: 90%;
 }
